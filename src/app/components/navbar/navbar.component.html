@@ -1,17 +1,13 @@
-<div id="body" class="ui-elem" fxLayoutAlign.lt-md="center center" fxLayout.lt-md="column">
-    <div id="content" fxLayout="column" fxFill>
-        <div fxFlex="80">
-            <h1> Audaces </h1>
-            <nav>
-                <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap.lt-md="5px" fxLayoutAlign.lt-md="center center">
-                    <a routerLink="/test"><p>Teste</p></a>
-                    <a routerLink="/about"><p>Sobre</p></a>
-                </div>
-            </nav>
-        </div>
+<div id="body" class="ui-elem" fxLayout.lt-md="column">
+    <div id="content" fxLayout="column" fxLayoutAlign.lt-md="center center" fxFill>
+        <h1> Audaces </h1>
+        <nav>
+            <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap.lt-md="5px" fxLayoutAlign.lt-md="center center">
+                <a routerLink="/test"><p>Teste</p></a>
+                <a routerLink="/about"><p>Sobre</p></a>
+            </div>
+        </nav>
 
-        <div fxFlex="20">
-            <button (click)="toggleTheme()">Mudar tema</button>
-        </div>
+        <button (click)="toggleTheme()">Mudar tema</button>
     </div>
 </div>
