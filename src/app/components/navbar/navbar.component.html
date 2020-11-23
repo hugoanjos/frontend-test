@@ -1,7 +1,10 @@
 <div id="body" class="ui-elem" fxLayout.lt-md="column">
     <div id="content" fxLayout="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="space-between start" fxFill>
         <div>
-            <h1> Audaces </h1>
+            <img src="../../../assets/Audaces_logo.svg"
+                 alt="audaces logo"
+                 [class.svg-white]="isDarkTheme"
+                 [class.svg-accent-light]="!isDarkTheme">
             <nav>
                 <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap.lt-md="5px" fxLayoutAlign.lt-md="center center">
                     <a routerLink="/test"><p>Teste</p></a>
