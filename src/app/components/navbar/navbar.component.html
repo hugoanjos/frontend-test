@@ -7,8 +7,8 @@
                  [class.svg-accent-light]="!isDarkTheme">
             <nav>
                 <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap.lt-md="5px" fxLayoutAlign.lt-md="center center">
-                    <a routerLink="/test"><p>Teste</p></a>
-                    <a routerLink="/about"><p>Sobre</p></a>
+                    <app-navbar-button name="Teste" route="/test" icon="Home" [isDarkTheme]="isDarkTheme"></app-navbar-button>
+                    <app-navbar-button name="Sobre" route="/about" icon="placeholder1" [isDarkTheme]="isDarkTheme"></app-navbar-button>
                 </div>
             </nav>
         </div>

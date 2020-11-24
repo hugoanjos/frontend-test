@@ -11,6 +11,7 @@ import { AnswersComponent } from './components/answers/answers.component';
 import { SequenceComponent } from './components/sequence/sequence.component';
 import { SocialComponent } from './components/social/social.component';
 import { VerticalAdComponent } from './components/vertical-ad/vertical-ad.component';
+import { NavbarButtonComponent } from './components/navbar-button/navbar-button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VerticalAdComponent } from './components/vertical-ad/vertical-ad.compon
     AnswersComponent,
     SequenceComponent,
     SocialComponent,
-    VerticalAdComponent
+    VerticalAdComponent,
+    NavbarButtonComponent
   ],
   imports: [
     BrowserModule,
