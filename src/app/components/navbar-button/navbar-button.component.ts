@@ -12,12 +12,14 @@ export class NavbarButtonComponent implements OnInit {
   @Input() icon: string
 
   @Input() isDarkTheme: boolean
+  @Input() isButton: boolean
 
   mouseHover: boolean
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.isButton);
     this.mouseHover = false;
     this.icon = "../../../assets/" + this.icon + ".svg";
   }

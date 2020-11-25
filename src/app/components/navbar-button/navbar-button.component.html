@@ -1,8 +1,8 @@
-<div id="body" fxLayoutAlign="start center" (mouseenter)="changeHover()" (mouseleave)="changeHover()">
+<div id="body" *ngIf="isButton" fxLayoutAlign="start center" (mouseenter)="changeHover()" (mouseleave)="changeHover()">
     <a routerLink="{{route}}">
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap.gt-sm="20px">
             <img src="{{icon}}" 
-                 alt="audaces logo"
+                 alt="Link para {{name}}"
                  [class.svg-secondary-dark]="isDarkTheme && !mouseHover"
                  [class.svg-secondary-light]="!isDarkTheme && !mouseHover"
                  [class.svg-accent-light]="!isDarkTheme && mouseHover"
@@ -11,4 +11,17 @@
             <span>{{name}}</span>
         </div>
     </a>
+</div>
+
+<div id="body" *ngIf="isButton == false" fxLayoutAlign="start center" (mouseenter)="changeHover()" (mouseleave)="changeHover()">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap.gt-sm="20px">
+        <img src="{{icon}}" 
+                alt="Botão para {{name}}"
+                [class.svg-secondary-dark]="isDarkTheme && !mouseHover"
+                [class.svg-secondary-light]="!isDarkTheme && !mouseHover"
+                [class.svg-accent-light]="!isDarkTheme && mouseHover"
+                [class.svg-accent-dark]="isDarkTheme && mouseHover"
+                >
+        <span>{{name}}</span>
+    </div>
 </div>
