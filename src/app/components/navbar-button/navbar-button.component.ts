@@ -19,7 +19,6 @@ export class NavbarButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.isButton);
     this.mouseHover = false;
     this.icon = "../../../assets/" + this.icon + ".svg";
   }
