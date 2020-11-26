@@ -2,7 +2,7 @@
     <a routerLink="{{route}}">
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap.gt-sm="20px">
             <img src="{{icon}}" 
-                 alt="Link para {{name}}"
+                 alt=""
                  [class.svg-secondary-dark]="isDarkTheme && !mouseHover"
                  [class.svg-secondary-light]="!isDarkTheme && !mouseHover"
                  [class.svg-accent-light]="!isDarkTheme && mouseHover"
@@ -16,7 +16,7 @@
 <div id="body" *ngIf="isButton == false" fxLayoutAlign="start center" (mouseenter)="changeHover()" (mouseleave)="changeHover()">
     <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap.gt-sm="20px">
         <img src="{{icon}}" 
-                alt="Botão para {{name}}"
+                alt=""
                 [class.svg-secondary-dark]="isDarkTheme && !mouseHover"
                 [class.svg-secondary-light]="!isDarkTheme && !mouseHover"
                 [class.svg-accent-light]="!isDarkTheme && mouseHover"
