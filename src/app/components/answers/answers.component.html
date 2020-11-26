@@ -1,3 +1,18 @@
-<div class="ui-elem">
-    <p>teste answers</p>
+<div class="ui-elem" id="body">
+    <div *ngIf="answers">
+        <div *ngIf="!isAnswer">
+            <p>Não existem combinações possíveis!</p>
+        </div>
+        <div *ngIf="isAnswer">
+            <h2>Possível combinação</h2>
+
+            <div fxLayout="row wrap" fxLayoutGap="24px">
+                <div *ngFor="let item of answers">
+                    <div class="answer">
+                        {{item}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

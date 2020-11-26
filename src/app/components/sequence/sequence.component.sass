@@ -1,0 +1,91 @@
+p
+    font: 16px
+
+#body
+    padding: 20px
+
+input
+    background-color: var(--input-bg)
+    color: var(--input-text)
+    font-size: 16px
+    height: 56px
+    line-height: 80px
+    width: 120px
+    border: 2px
+    border-radius: 2px 2px 0px 0px
+    margin: 5px 0 5px 0
+    padding-left: 12px
+
+#target
+    line-height: 56px
+
+.numbers
+    position: relative
+
+label
+    position: absolute
+    padding: 12px 0 0 12px
+    color: var(--input-title)
+
+.delete-button
+    position: absolute
+    right: 8px
+    top: 12px
+    height: 16px
+    width: 16px
+    border-radius: 50%
+    background-color: var(--foreground)
+    text-align: center
+    font-size: 12px
+
+.delete-text:hover
+    color: var(--accent)
+    cursor: pointer
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+#add-button
+    min-width: 56px
+    height: 56px
+    width: 56px
+    border-radius: 50%
+    background-color: var(--input-bg)
+    text-align: center
+    font-size: 24px
+    line-height: 50px
+
+#add-text:hover
+    color: var(--accent)
+    cursor: pointer
+
+#buttons
+    margin-top: 20px
+    font-size: 14px
+    text-align: center
+
+#clear-button
+    height: 36px
+    line-height: 36px
+    padding-left: 16px
+    padding-right: 16px
+
+#clear-button:hover
+    color: var(--accent)
+    cursor: pointer
+
+#calculate-button
+    height: 36px
+    line-height: 36px
+    padding-left: 16px
+    padding-right: 16px
+    border: 2px
+    border-radius: 4px 4px 4px 4px
+    background-color: var(--accent)
+    color: var(--foreground)
+
+#calculate-button:hover
+    filter: opacity(70%)
+    cursor: pointer

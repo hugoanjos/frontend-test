@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sequence',
@@ -7,23 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SequenceComponent implements OnInit {
 
-  private sequence: number[] = [];
-  private target: number;
-  private answer: number[] = [];
+  sequence: number[] = [1, 4, 5];
+  target: number = 10;
+  answer: number[] = [];
   
-  output: string;
+  @Output() output = new EventEmitter<number[]>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getAnswer() {
+    if (this.target == null) {
+      this.target = 0;
+    }
+
+    for (let i = 0; i < this.sequence.length; i++) {
+      if (this.sequence[i] == null) {
+        this.sequence[i] = 1;
+      }
+    }
+
     let seq = this.checkSequences();
     if (seq == 0) {
-      this.output = "A resposta é 0";
+      this.output.emit([0]);
     } else {
       if (seq == -1) {
-        this.output = "Não existem possibilidades"
+        this.output.emit([-1]);
       } else {
-        this.output = this.getCombination().toString();
+        this.output.emit(this.getCombination());
       }
     }
   }
@@ -32,11 +45,8 @@ export class SequenceComponent implements OnInit {
     if (this.target == 0) {
       return 0;
     }
-
-    this.sequence = [2, 7];
+      
     this.sequence.sort().reverse();
-
-    this.target = 8;
 
     this.answer = [];
 
@@ -80,8 +90,19 @@ export class SequenceComponent implements OnInit {
         i = attempt;
       }
     }
-
+    
     return this.answer;
   }
 
+  removeFromSequence(i) {
+    this.sequence.splice(i, 1);
+  }
+
+  addToSequence() {
+    this.sequence.push(1);
+  }
+
+  clearFields() {
+    this.sequence = new Array(this.sequence.length).fill(1);
+  }
 }

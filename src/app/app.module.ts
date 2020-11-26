@@ -12,6 +12,7 @@ import { SequenceComponent } from './components/sequence/sequence.component';
 import { SocialComponent } from './components/social/social.component';
 import { VerticalAdComponent } from './components/vertical-ad/vertical-ad.component';
 import { NavbarButtonComponent } from './components/navbar-button/navbar-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavbarButtonComponent } from './components/navbar-button/navbar-button.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

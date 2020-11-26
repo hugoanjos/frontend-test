@@ -1,3 +1,39 @@
-<div class="ui-elem">
-    <p *ngIf="output">{{output}}</p>
+<div class="ui-elem" id="body">
+    <h2>Teste Audaces</h2>
+    
+    <div fxLayout="row" fxLayoutAlign="space-between start">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="25px">
+            <p>Sequência:</p>
+            
+            <div *ngFor="let item of sequence; let i = index">
+                <div class="numbers">
+                    <div class="delete-button" (click)="removeFromSequence(i)">
+                        <span class="delete-text">x</span>
+                    </div>
+                    <label for="input{{i}}">Número {{i+1}}:</label>
+                    <input type="number" id="input{{i}}" [(ngModel)]="sequence[i]"/>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="add-button" (click)="addToSequence()">
+            <span id="add-text">+</span>
+        </div>
+    </div>
+    
+    <div fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="start center">
+        <p>Target:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+        <input id="target" type="number" [(ngModel)]="target" />
+    </div>
+
+    <div id="buttons" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+        <div id="clear-button" (click)="clearFields()">
+            <span>LIMPAR CAMPOS</span>
+        </div>
+        <div id="calculate-button" (click)="getAnswer()">
+            <span>COMBINAR</span>
+        </div>
+    </div>
 </div>

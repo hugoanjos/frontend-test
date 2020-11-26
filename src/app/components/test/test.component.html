@@ -1,4 +1,4 @@
 <div fxLayout="column">
-    <app-sequence fxFlex="60"></app-sequence>
-    <app-answers fxFlex="40"></app-answers>
+    <app-sequence (output)="getAnswers($event)"></app-sequence>
+    <app-answers [answers]="answers"></app-answers>
 </div>

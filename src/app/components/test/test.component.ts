@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  answers: number[];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getAnswers(answers) {
+    this.answers = answers;
   }
 
 }
