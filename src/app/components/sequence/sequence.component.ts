@@ -24,7 +24,7 @@ export class SequenceComponent implements OnInit {
     }
 
     for (let i = 0; i < this.sequence.length; i++) {
-      if (this.sequence[i] == null) {
+      if (this.sequence[i] == null || this.sequence[i] < 0) {
         this.sequence[i] = 1;
       }
     }
