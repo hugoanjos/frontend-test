@@ -1,14 +1,14 @@
 <div id="body" class="ui-elem" fxLayout.lt-md="column">
     <div id="content" fxLayout="column" fxLayoutAlign.lt-md="center center" fxLayoutAlign.gt-sm="space-between start" fxFill>
         <div>
-            <div id="logo" fxLayoutAlign.lt-md="center center">
+            <div id="logo" fxLayoutAlign.lt-md="start center">
                 <img src="../../../assets/Audaces_logo.svg"
                 alt="Logo Audaces"
                 [class.svg-white]="isDarkTheme"
                 [class.svg-accent-light]="!isDarkTheme">
             </div>
             <nav>
-                <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap.lt-md="20px" fxLayoutAlign.lt-md="center center">
+                <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap.lt-md="10px" fxLayoutAlign.lt-md="center center">
                     <app-navbar-button class="navbar-item" name="Teste" route="/test" icon="Home" [isDarkTheme]="isDarkTheme" [isButton]="true"></app-navbar-button>
                     <app-navbar-button class="navbar-item" name="Sobre" route="/about" icon="placeholder1" [isDarkTheme]="isDarkTheme" [isButton]="true"></app-navbar-button>
                     <app-navbar-button class="navbar-item" name="Exemplo 1" icon="placeholder2" [isDarkTheme]="isDarkTheme" [isButton]="false"></app-navbar-button>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div fxHide fxShow.lt-md id="floating" fxLayout="column" fxLayoutGap="10px">
+    <div fxHide fxShow.lt-md id="floating" fxLayout="column" fxLayoutGap="5px">
         <app-navbar-button name="Mudar tema" icon="theme" [isDarkTheme]="isDarkTheme" [isButton]="false" (click)="toggleTheme()"></app-navbar-button>
         <app-navbar-button name="Username" icon="username" [isDarkTheme]="isDarkTheme" [isButton]="false"></app-navbar-button>
     </div>
