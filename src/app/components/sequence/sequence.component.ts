@@ -19,7 +19,7 @@ export class SequenceComponent implements OnInit {
   }
 
   getAnswer() {
-    if (this.target == null) {
+    if (this.target == null || this.target < 0) {
       this.target = 0;
     }
 
