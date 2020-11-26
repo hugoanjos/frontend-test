@@ -1,3 +1,4 @@
-<div class="ui-elem">
-    <p>Conheça nossa página</p>
+<div class="ui-elem" id="body" *ngIf="image">
+    <app-fav-button></app-fav-button>
+    <div id="{{ 'social' + image }}" class="bg-image"></div>
 </div>

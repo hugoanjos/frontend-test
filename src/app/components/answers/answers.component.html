@@ -1,4 +1,8 @@
 <div class="ui-elem" id="body">
+    <div *ngIf="!answers">
+        <p>Resultado não calculado</p>
+    </div>
+
     <div *ngIf="answers">
         <div *ngIf="!isAnswer">
             <p>Não existem combinações possíveis!</p>

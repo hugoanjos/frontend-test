@@ -13,6 +13,7 @@ import { SocialComponent } from './components/social/social.component';
 import { VerticalAdComponent } from './components/vertical-ad/vertical-ad.component';
 import { NavbarButtonComponent } from './components/navbar-button/navbar-button.component';
 import { FormsModule } from '@angular/forms';
+import { FavButtonComponent } from './components/fav-button/fav-button.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     SequenceComponent,
     SocialComponent,
     VerticalAdComponent,
-    NavbarButtonComponent
+    NavbarButtonComponent,
+    FavButtonComponent
   ],
   imports: [
     BrowserModule,
